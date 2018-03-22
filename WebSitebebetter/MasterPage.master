@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>:: Be Better Clinical Psychology ::</title>
+
+    <!-- CSS -->
+    <link href="stylesheet/StyleSheet.css" rel="stylesheet" />
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <style>
+        .mySlides {
+            display: normal;
+            width: 100%;
+            height: 400px;
+        }
+
+        .navbar-default {
+            background-color: #4CAF50;
+        }    
+
+        .navbar .nav > li > a {
+            color: #653F14;
+        }
+        
+        .navbar .navbar-brand {
+            color: white;
+        }
+        
+        .navbar .navbar-brand > a:hover{
+            color: brown;
+        }
+
+        .navbar .nav > li > a:hover{
+            color: white;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar{
+            background-color: #653F14;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+  
+    <form id="form1" runat="server">
+        <div id="page">
+            <div class="content-section">
+                &nbsp;<img class="mySlides" src="images/1.jpg" />
+                <img class="mySlides" src="images/2.jpg" />
+                <img class="mySlides" src="images/4.jpg" />
+            </div>
+
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 5000); // Change image every 2 seconds
+                }
+            </script>
+             
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">    
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                       
+                        
+                    </div>
+                    
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="Home.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                            <li><a href="AboutUs.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-hand-right"></span> About Us</a></li>
+                            <li><a href="Staff.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-user"></span> Staff</a></li>
+                            <li><a href="Appointment.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-calendar"></span> Appointment</a></li>
+                            <li><a href="Forms.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-file"></span> Forms</a></li>
+                            <li><a href="Resource.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-circle-arrow-down"></span> Resources</a></li>
+                            <li><a href="ContactUs.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>  
+                            <li><a href="Login.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                 
+                </div>                             
+            </nav>
+                        
+            <%--<div id="header">
+                <!-- This section provides banner for the site pages. -->            
+            </div> --%>
+            <%--
+            <ul>
+                <li class="menuFont"><a href="Home.aspx"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                <li class="menuFont"><a href="AboutUs.aspx"><i class="fa fa-hand-o-right" aria-hidden="true"></i>About Us</a></li>
+
+                <li class="menuFont"><a href="Staff.aspx"><i class="fa fa-user" aria-hidden="true"></i>Staff</a></li>
+                <li class="menuFont"><a href="Appointment.aspx"><i class="fa fa-calendar" aria-hidden="true"></i>Appointment</a></li>
+                <li class="menuFont"><a href="Forms.aspx"><i class="fa fa-file-o" aria-hidden="true"></i>Forms</a></li>
+                <li class="menuFont"><a href="Resource.aspx"><i class="fa fa-external-link-square" aria-hidden="true"></i>Resources</a></li>
+                <li class="menuFont"><a href="ContactUs.aspx"><i class="fa fa-phone-square" aria-hidden="true"></i>Contact Us</a></li>
+                <li style="float: left; width: 213px; height: 34px;" class="menuFont"><a href="Login.aspx"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
+            </ul>
+            --%>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+   
+</body>
+</html>

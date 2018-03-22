@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>:: Be Better Clinical Psychology ::</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link href="stylesheet/StyleSheet.css" rel="stylesheet" />
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page">
+            
+            <style>
+                .mySlides {
+                    display: normal;
+                    width: 100%;
+                    height: 400px;
+                }
+
+                .auto-style1 {
+                    position: absolute;
+                    top: 351px;
+                    left: 1133px;
+                    z-index: 1;
+                }
+
+                .auto-style2 {
+                    position: absolute;
+                    top: 310px;
+                    left: 1227px;
+                    z-index: 1;
+                    width: 61px;
+                    height: 24px;
+                }
+
+                .auto-style3 {
+                    position: absolute;
+                    top: 309px;
+                    left: 1302px;
+                    z-index: 1;
+                }
+
+                .navbar-default {
+                    background-color: #4CAF50;
+                }
+
+                .navbar .nav > li > a {
+                    color: #653F14;
+                }
+
+                .navbar .navbar-brand {
+                    color: white;
+                }
+
+                    .navbar .navbar-brand > a:hover {
+                        color: brown;
+                    }
+
+                .navbar .nav > li > a:hover {
+                    color: white;
+                }
+
+                .navbar-default .navbar-toggle .icon-bar {
+                    background-color: #653F14;
+                }
+            </style>
+
+
+
+
+            <div class="content-section" style="background-color: lightblue;">
+                <img class="mySlides" src="images/1.jpg" /><asp:Label ID="Label_username" runat="server" CssClass="auto-style3" Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                &nbsp;<img class="mySlides" src="images/2.jpg" />
+                <img class="mySlides" src="images/4.jpg" />
+            </div>
+
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 5000); // Change image every 2 seconds
+                }
+            </script>
+
+            <%--<div id="header">
+                <!-- This section provides banner for the site pages. -->            
+            </div> --%>
+
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                       
+                    </div>
+
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="Home.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                            <li><a href="AboutUs.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-hand-right"></span> About Us</a></li>
+                            <li><a href="Staff.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-user"></span> Staff</a></li>
+                            <li><a href="Appointment.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-calendar"></span> Appointment</a></li>
+                            <li><a href="Forms.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-file"></span> Forms</a></li>
+                            <li><a href="Resource.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-circle-arrow-down"></span> Resources</a></li>
+                            <li><a href="ContactUs.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+                            <li><a href="ChangePassword.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-wrench"></span> Change Password</a></li>
+                            <li><a href="logout.aspx" style="font-family: OpenDyslexic; font-size: 15px;"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <p>
+                    &nbsp;
+                </p>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,184 @@
+﻿/* -- CSS for banner, including background image -- */
+#header {
+    height: 330px;    
+    /*padding-top: 5px;*/
+    background-color: white;        
+    color: #653F14;
+    background-image:url(../images/banner.jpg);
+    background-repeat:no-repeat;     
+}
+
+body {
+    background-color: #EFEFF7;
+}
+
+missionStatement {
+    font-family: OpenDyslexic; 
+    font-size: 15px;
+}
+
+.labels {
+    font-family: OpenDyslexic; 
+    font-size: 12px;
+}
+.h2{
+ font-family: OpenDyslexic; 
+    font-size: 12px;
+}
+@font-face {
+    font-family: OpenDyslexic;
+    src: url('../Font/OpenDyslexicAlta-Regular.otf');
+}
+
+ul {
+        height: 30px;
+}
+
+
+li a {
+    display: block; 
+    color: #653F14;
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.menuFont {
+    font-family: OpenDyslexic;
+    width: 219px;
+}
+
+li a:hover:not(.active) {
+    background-color: #2F6B31;
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.box {border:2px solid #00144F;}
+.box h2 {background:#653F14;color:white;padding:10px;font:OpenDyslexic;margin:0px;}
+.box p {color:#333;padding:10px;}        
+.box {
+    -moz-border-radius-topright:5px; 
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -moz-border-radius-bottomleft:5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-top-left-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+}  
+
+.well {
+    border:2px solid #4CAF50;
+}
+
+.well h2 {
+    background:#4CAF50; color:#653F14; padding:10px; font-family:OpenDyslexic; margin:0px;
+}
+
+.well p {
+    color:#333; padding:10px; font-family:OpenDyslexic; font-size:small;
+}
+
+.mbox {border:2px solid #4CAF50; width:800px; }
+.mbox h2 {background:#4CAF50; color:#653F14; padding:10px; font-family:OpenDyslexic; margin:0px;}
+.mbox p {color:#333; padding:10px; font-family:OpenDyslexic; font-size:small}        
+.mbox {
+        -moz-border-radius-topright:5px; 
+        -moz-border-radius-topleft:5px;
+        -moz-border-radius-bottomright:5px;
+        -moz-border-radius-bottomleft:5px;
+        -webkit-border-top-right-radius:5px;
+        -webkit-border-top-left-radius:5px;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px;
+}
+
+.register {border:2px solid #4CAF50;}
+.register h2 {background:#4CAF50; color:#653F14; padding:10px; font-family:OpenDyslexic; margin:0px;}
+.register p {color:black; padding:10px; font-family:OpenDyslexic; font-size:small}        
+.register{
+        -moz-border-radius-topright:5px; 
+        -moz-border-radius-topleft:5px;
+        -moz-border-radius-bottomright:5px;
+        -moz-border-radius-bottomleft:5px;
+        -webkit-border-top-right-radius:5px;
+        -webkit-border-top-left-radius:5px;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px;
+}
+
+.staff {border:2px solid #4CAF50; width:1200px; }
+.staff h2 {background:#4CAF50; color:#653F14; padding:2px; font-family:OpenDyslexic; margin:0px;
+    height: 32px;
+}
+.staff p {color:#333; padding:0px; font-family:OpenDyslexic; font-size:small}        
+.staff {
+        -moz-border-radius-topright:5px; 
+        -moz-border-radius-topleft:5px;
+        -moz-border-radius-bottomright:5px;
+        -moz-border-radius-bottomleft:5px;
+        -webkit-border-top-right-radius:5px;
+        -webkit-border-top-left-radius:5px;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px;
+}
+
+.centered {
+  position: absolute;  
+  left: 50%;  
+  transform: translate(-50%);
+}
+
+.label {
+          float:left;
+          width:27%;
+          margin-right:0.5em;
+          padding-top:0.2em;
+          text-align:right;          
+          width:200px;
+          padding: 0.5em;
+          font:80%/1 OpenDyslexic;
+          font-weight:bold;
+          color:black;
+}
+
+.form {border:2px solid #4CAF50; width:400px;}
+.form h2 {background:none; color:none; padding:2px; font-family:OpenDyslexic; font-size:small;}
+.form p {color:#333; padding:0px; font-family:OpenDyslexic; font-size:small}        
+.form {
+        -moz-border-radius-topright:5px; 
+        -moz-border-radius-topleft:5px;
+        -moz-border-radius-bottomright:5px;
+        -moz-border-radius-bottomleft:5px;
+        -webkit-border-top-right-radius:5px;
+        -webkit-border-top-left-radius:5px;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px;
+}
+.button{
+    background-color:#4CAF50;
+    border:none;
+    padding:15px 32px;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+    font-size:12px;
+    margin:4px 2px;
+    cursor:pointer;
+    font-family:OpenDyslexic;
+    border-radius:12px;
+}
